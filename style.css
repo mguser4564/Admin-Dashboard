@@ -3,135 +3,290 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-    
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-.container{
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
     height: 100vh;
 }
 
-.header{
+.header {
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: aqua;
+    position: relative;
+    background-color: #f87060;
+}
+  
+  .header:before {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+
+.header-contents{
     display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.sidebar{
+.search{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+#search-bar{
+    width: 75%;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333333;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+  #search-bar:focus {
+    box-shadow: 0 0 10px #db7267;
+    border: 3px solid #cdd7d6;
+    outline: none;
+  }
+
+.controls{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-button{
+    width: 75%;
+    height: 30px;
+    border: none;
+    color: #ffffff;
+    background-color: #102542;
+    border-radius: 10px;
+}
+
+.header-button:hover {
+    background-color: #183a68;
+  }
+
+.sidebar {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 7;
-    background-color: blueviolet;
+    background-color: #102542;
     display: grid;
 }
 
-.sidebar-button{
-    width: 100%; /* Make the button full width */
-    height: 40px; /* Make the button full height */
-    padding: 0; /* Remove the padding */
-    border: none; /* Remove the border */
-    margin: 0; /* Remove the margin */
+.sidebar-button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: #ffffff;
+    background-color: #102542;
 }
 
-.logo{
+.sidebar-button:hover{
+    background-color: #183a68;
+}
+
+.logo {
     font-size: 36px;
     padding-bottom: 40px;
+    color: #ffffff;
 }
 
-.menu1{
-    display:grid;
+.menu1, .menu2 {
+    display: grid;
     grid-auto-rows: min-content;
-    padding-bottom: 50px
+    position: relative;
+    top: -100px;
 }
 
-.menu2{
-    display:grid;
-    grid-auto-rows: min-content;
-    padding-bottom: 300px
-}
-
-.body{
+.body {
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 7;
-    background-color: blue;
+    background-color: #cdd7d6;
     display: grid;
     grid-template-columns: 1fr 1fr .75fr;
     grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
 }
 
-.projects{
+.projects {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 4;
-    border: 5px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
 }
 
-.item{
+.item {
     padding: 10px;
-    border: 5px solid black;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
-.info{
+.info {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 4;
-    border: 5px solid black;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 15px;
 }
