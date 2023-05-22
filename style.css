@@ -175,14 +175,13 @@ table {
 }
 
 .search{
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
+    padding-top: 15px;
+    padding-left: 15px;
 }
 
 #search-bar{
     width: 75%;
-    height: 40px;
+    height: 36px;
     padding: 5px;
     border: none;
     border-radius: 20px;
@@ -245,15 +244,29 @@ table {
     vertical-align: text-bottom;
   }
 
+.icon-logo {
+    vertical-align: top;
+  }
+
+  .logo-container{
+    display: grid;
+    justify-items: center; 
+  }
+
 .logo {
     font-size: 36px;
     font-family: 'Times New Roman', Times, serif;
     padding-bottom: 40px;
     padding-top: 15px;
     color: #ffffff;
-    display: grid;
-    justify-content: center;
+    vertical-align: middle;
 }
+
+@media (max-width: 1024px) {
+    .icon-logo {
+      display: none; /* Hide the text when the screen size is smaller than 768px */
+    }
+  }
 
 .menu1, .menu2 {
     display: grid;
