@@ -197,12 +197,35 @@ table {
     outline: none;
   }
 
+.welcome-slogan{
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    gap: 5px;
+}
+
+
+
+.circle-image {
+  width: 60px; 
+  height: 60px;
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+
 .controls{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: end;
     align-items: center;
     gap: 10px;
+    padding-right: 15px;
 }
 
 .header-button{
