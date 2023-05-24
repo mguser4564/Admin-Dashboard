@@ -134,7 +134,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-*{
+
+* {
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
@@ -153,8 +154,8 @@ table {
     position: relative;
     background-color: #f87060;
 }
-  
-  .header:before {
+
+.header:before {
     content: "";
     position: absolute;
     background-color: #ffffff;
@@ -163,9 +164,9 @@ table {
     right: 0;
     height: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  }
+}
 
-.header-contents{
+.header-contents {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -174,12 +175,12 @@ table {
     padding-right: 15px;
 }
 
-.search{
+.search {
     padding-top: 15px;
     padding-left: 15px;
 }
 
-#search-bar{
+#search-bar {
     width: 75%;
     height: 36px;
     padding: 5px;
@@ -195,9 +196,25 @@ table {
     box-shadow: 0 0 10px #db7267;
     border: 3px solid #cdd7d6;
     outline: none;
-  }
+}
 
-.welcome-slogan{
+.user {
+    display: grid;
+    grid-template-columns: 1fr .4fr .8fr;
+    justify-items: end;
+    align-items: center;
+    padding-right: 25px;
+    gap: 5px;
+}
+
+.user-name {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.welcome-slogan {
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -210,16 +227,21 @@ table {
     gap: 5px;
 }
 
-
-
 .circle-image {
-  width: 60px; 
-  height: 60px;
-  border-radius: 50%; 
-  object-fit: cover; 
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.controls{
+.circle-image2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.controls {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: end;
@@ -228,8 +250,8 @@ table {
     padding-right: 15px;
 }
 
-.header-button{
-    width: 75%;
+.header-button {
+    width: clamp(50px, 75%, 100%);
     height: 30px;
     border: none;
     color: #ffffff;
@@ -239,7 +261,7 @@ table {
 
 .header-button:hover {
     background-color: #183a68;
-  }
+}
 
 .sidebar {
     grid-column-start: 1;
@@ -259,44 +281,60 @@ table {
     background-color: #102542;
 }
 
-.sidebar-button:hover{
+.sidebar-button:hover {
     background-color: #183a68;
 }
 
 .icon {
     vertical-align: text-bottom;
-  }
+}
 
 .icon-logo {
     vertical-align: top;
-  }
+}
 
-  .logo-container{
+.logo-container {
     display: grid;
-    justify-items: center; 
-  }
+    justify-items: center;
+}
 
 .logo {
     font-size: 36px;
     font-family: 'Times New Roman', Times, serif;
-    padding-bottom: 40px;
+    padding-bottom: 120px;
     padding-top: 15px;
     color: #ffffff;
     vertical-align: middle;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
 }
 
 @media (max-width: 1024px) {
-    .icon-logo {
-      display: none; /* Hide the text when the screen size is smaller than 768px */
+    .logo-text {
+        display: none;
+        /* Hide the text when the screen size is smaller than 768px */
     }
-  }
+}
 
-.menu1, .menu2 {
+@media (max-width: 665px) {
+    .welcome-slogan {
+        font-size: 14px;
+    }
+
+    .user-name {
+        font-size: 10px;
+    }
+}
+
+.menu1,
+.menu2 {
     display: grid;
     grid-auto-rows: min-content;
     position: relative;
     top: -100px;
-    
+
 }
 
 .body {
@@ -340,14 +378,14 @@ table {
     width: 6px;
     height: 100%;
     background-color: #f87060;
-  }
-  
-  .item-inner {
+}
+
+.item-inner {
     position: relative;
     margin-left: 10px;
-  }
-  
-  .item-inner::before {
+}
+
+.item-inner::before {
     content: "";
     position: absolute;
     top: 0;
@@ -356,7 +394,7 @@ table {
     width: 10px;
     background-color: #f87060;
     border-radius: 10px 0 0 10px;
-  }
+}
 
 .info {
     grid-column-start: 3;
@@ -369,10 +407,12 @@ table {
     gap: 15px;
 }
 
-.info-item{
+.info-item {
     position: relative;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-};
+}
+
+;
