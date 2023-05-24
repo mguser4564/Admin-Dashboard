@@ -345,20 +345,30 @@ table {
     background-color: #cdd7d6;
     display: grid;
     grid-template-columns: 1fr 1fr .75fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: .1fr 1fr 1fr 1fr;
     gap: 15px;
     padding: 15px;
+    padding-top: 25px;
+    
+}
+
+.body-titles{
+    font-size: 16px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #102542;
 }
 
 .projects {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 15px;
+    
 }
 
 .item {
@@ -367,7 +377,11 @@ table {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .3fr;
+    align-items: center;
 }
 
 .item::before {
@@ -396,14 +410,44 @@ table {
     border-radius: 10px 0 0 10px;
 }
 
+.item-text{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.item-text-slogan{
+    font-size: 14px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #102542;
+}
+
+.item-text-body{
+    font-size: 12px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color: #102542;
+}
+
+.item-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30px, 50px));
+    justify-self: end;
+}
+
+  .trending::after {
+    content: "";
+    display: grid;
+    height: 100%;
+  }
+
 .info {
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr .01fr 1fr;
     gap: 15px;
 }
 
@@ -414,5 +458,3 @@ table {
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
-
-;
